@@ -18,9 +18,9 @@ let capacity = area / (plantSpace * plantStart);
 let percentage = states / capacity;
 
 // Logic Flow
-if (capacity > 80) {
+if (percentage > 80) {
   console.log(`pruned`);
-} else if (capacity >= 50 && capacity <= 80) {
+} else if (percentage >= 50 && percentage <= 80) {
   console.log(`monitored`);
 } else {
   console.log(`More room to grow plants`);
@@ -28,10 +28,15 @@ if (capacity > 80) {
 
 //week 2 code
 weeks++;
+console.log(weeks);
 
-if (capacity > 80) {
+states = plantStart * Math.pow(2, weeks);
+capacity = area / (plantSpace * plantStart);
+percentage = states / capacity;
+
+if (percentage > 80) {
   console.log(`pruned`);
-} else if (capacity >= 50 && capacity <= 80) {
+} else if (percentage >= 50 && percentage <= 80) {
   console.log(`monitored`);
 } else {
   console.log(`More room to grow plants`);
@@ -40,9 +45,13 @@ if (capacity > 80) {
 //week 3 code
 weeks++;
 
-if (capacity > 80) {
+states = plantStart * Math.pow(2, weeks);
+capacity = area / (plantSpace * plantStart);
+percentage = states / capacity;
+
+if (percentage > 80) {
   console.log(`pruned`);
-} else if (capacity >= 50 && capacity <= 80) {
+} else if (percentage >= 50 && percentage <= 80) {
   console.log(`monitored`);
 } else {
   console.log(`More room to grow plants`);
