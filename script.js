@@ -1,6 +1,6 @@
 /**
  *
- *
+ * Don't use loops or functions
  *
  */
 
