@@ -15,6 +15,44 @@ let plantSpace = 0.8;
 let plantStart = 20;
 
 // Plant Growth Control Flow
+// teacher's code
+const plants = plantStart * 2 ** weeks;
+const overallSpace = plants * 0.8;
+console.log(overallSpace);
+
+const garden80Percent = area * 0.8;
+const garden50Percent = area * 0.5;
+
+console.log(
+  `Total Plants: ${plants} Space needed for plants ${plantSpace} square meters Garden Area: ${area}`
+);
+
+if (overallSpace > garden80Percent) {
+  console.log(
+    `Week: ${
+      weeks + 1
+    } | Prune: stop them from exceeding the capacity of the garden`
+  );
+} else if (overallSpace > garden50Percent) {
+  console.log(
+    `Week: ${weeks + 1} | Monitor: they are growing at an acceptable rate.`
+  );
+} else {
+  console.log(`Week: ${weeks + 1} | Plant: there is room for more plants`);
+}
+
+// Week 1
+// increment the week
+weeks++;
+
+// recalculate stats
+plants = plantStart * 2 ** weeks;
+overallSpace = plants * 0.8;
+
+// repeat the control flow
+
+// End of teacher's code
+
 let weeks = 1;
 let states = plantStart * Math.pow(2, weeks);
 let capacity = area / (plantSpace * plantStart);
@@ -71,3 +109,4 @@ if (percentage > 80) {
 // Part 2 - Thinking Bigger
 
 // Part 3 - Errors in judgement
+planStart = 100;
