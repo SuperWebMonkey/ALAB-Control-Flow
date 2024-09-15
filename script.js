@@ -145,8 +145,9 @@ if (overallSpace > garden80Percent) {
 // }
 
 // Part 2 - Thinking Bigger
+// plants do not prune at week 2
 plantStart = 100;
-weeks = 10;
+weeks = 2;
 let plants2 = plantStart * 2 ** weeks;
 let overallSpace2 = plants2 * 0.8;
 let newRadius = overallSpace2 / (PI * radius);
@@ -155,8 +156,13 @@ console.log(`The new radius is ${newRadius}`);
 
 // Part 3 - Errors in judgement
 try {
+  if (overallSpace2 < area) {
+    console.log(`Did not exceed space.`);
+  } else {
+    throw "Exceeds space";
+  }
 } catch (err) {
   console.log(err);
-} else {
-  
+} finally {
+  console.log(`The space is ${overallSpace2}`);
 }
