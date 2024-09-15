@@ -91,6 +91,7 @@ if (overallSpace > garden80Percent) {
 
 // End of teacher's code
 
+// Code by the group
 // let weeks = 1;
 // let states = plantStart * Math.pow(2, weeks);
 // let capacity = area / (plantSpace * plantStart);
@@ -143,6 +144,7 @@ if (overallSpace > garden80Percent) {
 // } else {
 //   console.log(`More room to grow plants`);
 // }
+// End of our code
 
 // Part 2 - Thinking Bigger
 // plants do not prune at week 2
